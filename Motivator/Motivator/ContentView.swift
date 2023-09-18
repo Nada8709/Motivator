@@ -10,7 +10,7 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         TabView{
-            Text("Settings")
+            SettingsView()
                 .tabItem {
                     Image("settings").renderingMode(.template)
                      Text("Settings")

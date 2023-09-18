@@ -13,23 +13,23 @@
 		CC3299232AB0C66A00B13A6C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC3299222AB0C66A00B13A6C /* Preview Assets.xcassets */; };
 		CC590EDD2AB10B1500B237DB /* ProgressTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC590EDC2AB10B1500B237DB /* ProgressTabView.swift */; };
 		CC590EDF2AB114AB00B237DB /* TodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC590EDE2AB114AA00B237DB /* TodayView.swift */; };
-		CC590EE72AB116D300B237DB /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC590EE62AB116D300B237DB /* WidgetKit.framework */; };
-		CC590EE92AB116D300B237DB /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC590EE82AB116D300B237DB /* SwiftUI.framework */; };
-		CC590EEC2AB116D300B237DB /* PushUpsWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC590EEB2AB116D300B237DB /* PushUpsWidgetBundle.swift */; };
-		CC590EEE2AB116D300B237DB /* PushUpsWidgetLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC590EED2AB116D300B237DB /* PushUpsWidgetLiveActivity.swift */; };
-		CC590EF02AB116D300B237DB /* PushUpsWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC590EEF2AB116D300B237DB /* PushUpsWidget.swift */; };
-		CC590EF32AB116D500B237DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC590EF22AB116D500B237DB /* Assets.xcassets */; };
-		CC590EF52AB116D500B237DB /* PushUpsWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = CC590EF12AB116D300B237DB /* PushUpsWidget.intentdefinition */; };
-		CC590EF62AB116D500B237DB /* PushUpsWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = CC590EF12AB116D300B237DB /* PushUpsWidget.intentdefinition */; };
-		CC590EF92AB116D500B237DB /* PushUpsWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = CC590EE42AB116D300B237DB /* PushUpsWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		CCACB3382AB88F9D00B6C00A /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCACB3372AB88F9D00B6C00A /* SettingsView.swift */; };
+		CCD08D422AB8D3C500D3C940 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC590EE62AB116D300B237DB /* WidgetKit.framework */; };
+		CCD08D432AB8D3C500D3C940 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC590EE82AB116D300B237DB /* SwiftUI.framework */; };
+		CCD08D462AB8D3C500D3C940 /* PushUpsWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD08D452AB8D3C500D3C940 /* PushUpsWidgetBundle.swift */; };
+		CCD08D482AB8D3C500D3C940 /* PushUpsWidgetLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD08D472AB8D3C500D3C940 /* PushUpsWidgetLiveActivity.swift */; };
+		CCD08D4A2AB8D3C500D3C940 /* PushUpsWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD08D492AB8D3C500D3C940 /* PushUpsWidget.swift */; };
+		CCD08D4C2AB8D3C500D3C940 /* AppIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD08D4B2AB8D3C500D3C940 /* AppIntent.swift */; };
+		CCD08D4E2AB8D3C700D3C940 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCD08D4D2AB8D3C700D3C940 /* Assets.xcassets */; };
+		CCD08D522AB8D3C700D3C940 /* PushUpsWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = CCD08D412AB8D3C500D3C940 /* PushUpsWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		CC590EF72AB116D500B237DB /* PBXContainerItemProxy */ = {
+		CCD08D502AB8D3C700D3C940 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = CC3299102AB0C66800B13A6C /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = CC590EE32AB116D300B237DB;
+			remoteGlobalIDString = CCD08D402AB8D3C500D3C940;
 			remoteInfo = PushUpsWidgetExtension;
 		};
 /* End PBXContainerItemProxy section */
@@ -41,7 +41,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				CC590EF92AB116D500B237DB /* PushUpsWidgetExtension.appex in Embed Foundation Extensions */,
+				CCD08D522AB8D3C700D3C940 /* PushUpsWidgetExtension.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -56,15 +56,16 @@
 		CC3299222AB0C66A00B13A6C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CC590EDC2AB10B1500B237DB /* ProgressTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressTabView.swift; sourceTree = "<group>"; };
 		CC590EDE2AB114AA00B237DB /* TodayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayView.swift; sourceTree = "<group>"; };
-		CC590EE42AB116D300B237DB /* PushUpsWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = PushUpsWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC590EE62AB116D300B237DB /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		CC590EE82AB116D300B237DB /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
-		CC590EEB2AB116D300B237DB /* PushUpsWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushUpsWidgetBundle.swift; sourceTree = "<group>"; };
-		CC590EED2AB116D300B237DB /* PushUpsWidgetLiveActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushUpsWidgetLiveActivity.swift; sourceTree = "<group>"; };
-		CC590EEF2AB116D300B237DB /* PushUpsWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushUpsWidget.swift; sourceTree = "<group>"; };
-		CC590EF12AB116D300B237DB /* PushUpsWidget.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = PushUpsWidget.intentdefinition; sourceTree = "<group>"; };
-		CC590EF22AB116D500B237DB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		CC590EF42AB116D500B237DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CCACB3372AB88F9D00B6C00A /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		CCD08D412AB8D3C500D3C940 /* PushUpsWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = PushUpsWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		CCD08D452AB8D3C500D3C940 /* PushUpsWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushUpsWidgetBundle.swift; sourceTree = "<group>"; };
+		CCD08D472AB8D3C500D3C940 /* PushUpsWidgetLiveActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushUpsWidgetLiveActivity.swift; sourceTree = "<group>"; };
+		CCD08D492AB8D3C500D3C940 /* PushUpsWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushUpsWidget.swift; sourceTree = "<group>"; };
+		CCD08D4B2AB8D3C500D3C940 /* AppIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIntent.swift; sourceTree = "<group>"; };
+		CCD08D4D2AB8D3C700D3C940 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CCD08D4F2AB8D3C700D3C940 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,12 +76,12 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CC590EE12AB116D300B237DB /* Frameworks */ = {
+		CCD08D3E2AB8D3C500D3C940 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CC590EE92AB116D300B237DB /* SwiftUI.framework in Frameworks */,
-				CC590EE72AB116D300B237DB /* WidgetKit.framework in Frameworks */,
+				CCD08D432AB8D3C500D3C940 /* SwiftUI.framework in Frameworks */,
+				CCD08D422AB8D3C500D3C940 /* WidgetKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,7 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				CC32991A2AB0C66800B13A6C /* Motivator */,
-				CC590EEA2AB116D300B237DB /* PushUpsWidget */,
+				CCD08D442AB8D3C500D3C940 /* PushUpsWidget */,
 				CC590EE52AB116D300B237DB /* Frameworks */,
 				CC3299192AB0C66800B13A6C /* Products */,
 			);
@@ -101,7 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				CC3299182AB0C66800B13A6C /* Motivator.app */,
-				CC590EE42AB116D300B237DB /* PushUpsWidgetExtension.appex */,
+				CCD08D412AB8D3C500D3C940 /* PushUpsWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -115,6 +116,7 @@
 				CC3299212AB0C66A00B13A6C /* Preview Content */,
 				CC590EDC2AB10B1500B237DB /* ProgressTabView.swift */,
 				CC590EDE2AB114AA00B237DB /* TodayView.swift */,
+				CCACB3372AB88F9D00B6C00A /* SettingsView.swift */,
 			);
 			path = Motivator;
 			sourceTree = "<group>";
@@ -136,15 +138,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		CC590EEA2AB116D300B237DB /* PushUpsWidget */ = {
+		CCD08D442AB8D3C500D3C940 /* PushUpsWidget */ = {
 			isa = PBXGroup;
 			children = (
-				CC590EEB2AB116D300B237DB /* PushUpsWidgetBundle.swift */,
-				CC590EED2AB116D300B237DB /* PushUpsWidgetLiveActivity.swift */,
-				CC590EEF2AB116D300B237DB /* PushUpsWidget.swift */,
-				CC590EF12AB116D300B237DB /* PushUpsWidget.intentdefinition */,
-				CC590EF22AB116D500B237DB /* Assets.xcassets */,
-				CC590EF42AB116D500B237DB /* Info.plist */,
+				CCD08D452AB8D3C500D3C940 /* PushUpsWidgetBundle.swift */,
+				CCD08D472AB8D3C500D3C940 /* PushUpsWidgetLiveActivity.swift */,
+				CCD08D492AB8D3C500D3C940 /* PushUpsWidget.swift */,
+				CCD08D4B2AB8D3C500D3C940 /* AppIntent.swift */,
+				CCD08D4D2AB8D3C700D3C940 /* Assets.xcassets */,
+				CCD08D4F2AB8D3C700D3C940 /* Info.plist */,
 			);
 			path = PushUpsWidget;
 			sourceTree = "<group>";
@@ -164,20 +166,20 @@
 			buildRules = (
 			);
 			dependencies = (
-				CC590EF82AB116D500B237DB /* PBXTargetDependency */,
+				CCD08D512AB8D3C700D3C940 /* PBXTargetDependency */,
 			);
 			name = Motivator;
 			productName = Motivator;
 			productReference = CC3299182AB0C66800B13A6C /* Motivator.app */;
 			productType = "com.apple.product-type.application";
 		};
-		CC590EE32AB116D300B237DB /* PushUpsWidgetExtension */ = {
+		CCD08D402AB8D3C500D3C940 /* PushUpsWidgetExtension */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CC590EFA2AB116D500B237DB /* Build configuration list for PBXNativeTarget "PushUpsWidgetExtension" */;
+			buildConfigurationList = CCD08D552AB8D3C700D3C940 /* Build configuration list for PBXNativeTarget "PushUpsWidgetExtension" */;
 			buildPhases = (
-				CC590EE02AB116D300B237DB /* Sources */,
-				CC590EE12AB116D300B237DB /* Frameworks */,
-				CC590EE22AB116D300B237DB /* Resources */,
+				CCD08D3D2AB8D3C500D3C940 /* Sources */,
+				CCD08D3E2AB8D3C500D3C940 /* Frameworks */,
+				CCD08D3F2AB8D3C500D3C940 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -185,7 +187,7 @@
 			);
 			name = PushUpsWidgetExtension;
 			productName = PushUpsWidgetExtension;
-			productReference = CC590EE42AB116D300B237DB /* PushUpsWidgetExtension.appex */;
+			productReference = CCD08D412AB8D3C500D3C940 /* PushUpsWidgetExtension.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
@@ -195,14 +197,14 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1430;
+				LastSwiftUpdateCheck = 1500;
 				LastUpgradeCheck = 1430;
 				TargetAttributes = {
 					CC3299172AB0C66800B13A6C = {
 						CreatedOnToolsVersion = 14.3;
 					};
-					CC590EE32AB116D300B237DB = {
-						CreatedOnToolsVersion = 14.3;
+					CCD08D402AB8D3C500D3C940 = {
+						CreatedOnToolsVersion = 15.0;
 					};
 				};
 			};
@@ -220,7 +222,7 @@
 			projectRoot = "";
 			targets = (
 				CC3299172AB0C66800B13A6C /* Motivator */,
-				CC590EE32AB116D300B237DB /* PushUpsWidgetExtension */,
+				CCD08D402AB8D3C500D3C940 /* PushUpsWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -235,11 +237,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CC590EE22AB116D300B237DB /* Resources */ = {
+		CCD08D3F2AB8D3C500D3C940 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CC590EF32AB116D500B237DB /* Assets.xcassets in Resources */,
+				CCD08D4E2AB8D3C700D3C940 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,7 +252,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CC590EF62AB116D500B237DB /* PushUpsWidget.intentdefinition in Sources */,
+				CCACB3382AB88F9D00B6C00A /* SettingsView.swift in Sources */,
 				CC32991E2AB0C66800B13A6C /* ContentView.swift in Sources */,
 				CC590EDD2AB10B1500B237DB /* ProgressTabView.swift in Sources */,
 				CC590EDF2AB114AB00B237DB /* TodayView.swift in Sources */,
@@ -258,24 +260,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CC590EE02AB116D300B237DB /* Sources */ = {
+		CCD08D3D2AB8D3C500D3C940 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CC590EEC2AB116D300B237DB /* PushUpsWidgetBundle.swift in Sources */,
-				CC590EEE2AB116D300B237DB /* PushUpsWidgetLiveActivity.swift in Sources */,
-				CC590EF02AB116D300B237DB /* PushUpsWidget.swift in Sources */,
-				CC590EF52AB116D500B237DB /* PushUpsWidget.intentdefinition in Sources */,
+				CCD08D462AB8D3C500D3C940 /* PushUpsWidgetBundle.swift in Sources */,
+				CCD08D4C2AB8D3C500D3C940 /* AppIntent.swift in Sources */,
+				CCD08D482AB8D3C500D3C940 /* PushUpsWidgetLiveActivity.swift in Sources */,
+				CCD08D4A2AB8D3C500D3C940 /* PushUpsWidget.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		CC590EF82AB116D500B237DB /* PBXTargetDependency */ = {
+		CCD08D512AB8D3C700D3C940 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = CC590EE32AB116D300B237DB /* PushUpsWidgetExtension */;
-			targetProxy = CC590EF72AB116D500B237DB /* PBXContainerItemProxy */;
+			target = CCD08D402AB8D3C500D3C940 /* PushUpsWidgetExtension */;
+			targetProxy = CCD08D502AB8D3C700D3C940 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -456,50 +458,61 @@
 			};
 			name = Release;
 		};
-		CC590EFB2AB116D500B237DB /* Debug */ = {
+		CCD08D532AB8D3C700D3C940 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 34M43W4NNP;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PushUpsWidget/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = PushUpsWidget;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = Nada.Ashraf.Motivator.PushUpsWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		CC590EFC2AB116D500B237DB /* Release */ = {
+		CCD08D542AB8D3C700D3C940 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 34M43W4NNP;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PushUpsWidget/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = PushUpsWidget;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = Nada.Ashraf.Motivator.PushUpsWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -531,11 +544,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CC590EFA2AB116D500B237DB /* Build configuration list for PBXNativeTarget "PushUpsWidgetExtension" */ = {
+		CCD08D552AB8D3C700D3C940 /* Build configuration list for PBXNativeTarget "PushUpsWidgetExtension" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CC590EFB2AB116D500B237DB /* Debug */,
-				CC590EFC2AB116D500B237DB /* Release */,
+				CCD08D532AB8D3C700D3C940 /* Debug */,
+				CCD08D542AB8D3C700D3C940 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
