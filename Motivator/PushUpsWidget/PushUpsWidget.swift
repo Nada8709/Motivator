@@ -7,7 +7,7 @@
 
 import WidgetKit
 import SwiftUI
-
+import AppIntents
 struct Provider: AppIntentTimelineProvider {
     func placeholder(in context: Context) -> SimpleEntry {
         SimpleEntry(date: Date(), configuration: ConfigurationAppIntent())
@@ -56,12 +56,15 @@ struct PushUpsWidgetEntryView : View {
     }
     
     var middleView: some View{
-        HStack(spacing: 25){
-            Image("minus")
+        HStack(spacing: 20){
+            
+        Button("", image: ImageResource(name: "minus", bundle: .main), intent: PlusButton()).buttonStyle(PlainButtonStyle())
+            
             Text("0")
                 .foregroundColor(Color(UIColor(red: 0.18, green: 0.5, blue: 0.93, alpha: 1)).opacity(0.5))
                 .font(.system(size: 36))
-            Image("plus")
+         
+            Button("", image: ImageResource(name: "plus", bundle: .main), intent: PlusButton()).buttonStyle(PlainButtonStyle())
         }
     }
     
@@ -117,4 +120,12 @@ extension ConfigurationAppIntent {
 } timeline: {
     SimpleEntry(date: .now, configuration: .smiley)
     SimpleEntry(date: .now, configuration: .starEyes)
+}
+
+ struct PlusButton: AppIntent{
+    static var title: LocalizedStringResource = "plus button is pressed"
+    
+    func perform() async throws -> some IntentResult {
+        return .result()
+    }
 }

@@ -7,10 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CC0067462ABB4CE600AAA1B2 /* DetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0067452ABB4CE600AAA1B2 /* DetailsView.swift */; };
+		CC2991AE2ABDC79E00283DCE /* EditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2991AD2ABDC79E00283DCE /* EditView.swift */; };
+		CC2991B02ABDE63200283DCE /* WidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2991AF2ABDE63200283DCE /* WidgetView.swift */; };
 		CC32991C2AB0C66800B13A6C /* MotivatorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC32991B2AB0C66800B13A6C /* MotivatorApp.swift */; };
 		CC32991E2AB0C66800B13A6C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC32991D2AB0C66800B13A6C /* ContentView.swift */; };
 		CC3299202AB0C66A00B13A6C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC32991F2AB0C66A00B13A6C /* Assets.xcassets */; };
 		CC3299232AB0C66A00B13A6C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC3299222AB0C66A00B13A6C /* Preview Assets.xcassets */; };
+		CC4529CE2AC0E9A600DA588F /* WidgetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4529CD2AC0E9A600DA588F /* WidgetViewModel.swift */; };
+		CC4529D12AC0F10400DA588F /* WidgetModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CC4529CF2AC0F10400DA588F /* WidgetModel.xcdatamodeld */; };
+		CC4529D32AC0F17400DA588F /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4529D22AC0F17400DA588F /* DataController.swift */; };
 		CC590EDD2AB10B1500B237DB /* ProgressTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC590EDC2AB10B1500B237DB /* ProgressTabView.swift */; };
 		CC590EDF2AB114AB00B237DB /* TodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC590EDE2AB114AA00B237DB /* TodayView.swift */; };
 		CCACB3382AB88F9D00B6C00A /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCACB3372AB88F9D00B6C00A /* SettingsView.swift */; };
@@ -49,11 +55,17 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		CC0067452ABB4CE600AAA1B2 /* DetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsView.swift; sourceTree = "<group>"; };
+		CC2991AD2ABDC79E00283DCE /* EditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditView.swift; sourceTree = "<group>"; };
+		CC2991AF2ABDE63200283DCE /* WidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetView.swift; sourceTree = "<group>"; };
 		CC3299182AB0C66800B13A6C /* Motivator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Motivator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC32991B2AB0C66800B13A6C /* MotivatorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotivatorApp.swift; sourceTree = "<group>"; };
 		CC32991D2AB0C66800B13A6C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		CC32991F2AB0C66A00B13A6C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CC3299222AB0C66A00B13A6C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		CC4529CD2AC0E9A600DA588F /* WidgetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetViewModel.swift; sourceTree = "<group>"; };
+		CC4529D02AC0F10400DA588F /* WidgetModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = WidgetModel.xcdatamodel; sourceTree = "<group>"; };
+		CC4529D22AC0F17400DA588F /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		CC590EDC2AB10B1500B237DB /* ProgressTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressTabView.swift; sourceTree = "<group>"; };
 		CC590EDE2AB114AA00B237DB /* TodayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayView.swift; sourceTree = "<group>"; };
 		CC590EE62AB116D300B237DB /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
@@ -91,6 +103,7 @@
 		CC32990F2AB0C66800B13A6C = {
 			isa = PBXGroup;
 			children = (
+				CC4529D22AC0F17400DA588F /* DataController.swift */,
 				CC32991A2AB0C66800B13A6C /* Motivator */,
 				CCD08D442AB8D3C500D3C940 /* PushUpsWidget */,
 				CC590EE52AB116D300B237DB /* Frameworks */,
@@ -111,12 +124,17 @@
 			isa = PBXGroup;
 			children = (
 				CC32991B2AB0C66800B13A6C /* MotivatorApp.swift */,
+				CC4529CF2AC0F10400DA588F /* WidgetModel.xcdatamodeld */,
 				CC32991D2AB0C66800B13A6C /* ContentView.swift */,
 				CC32991F2AB0C66A00B13A6C /* Assets.xcassets */,
 				CC3299212AB0C66A00B13A6C /* Preview Content */,
 				CC590EDC2AB10B1500B237DB /* ProgressTabView.swift */,
 				CC590EDE2AB114AA00B237DB /* TodayView.swift */,
 				CCACB3372AB88F9D00B6C00A /* SettingsView.swift */,
+				CC0067452ABB4CE600AAA1B2 /* DetailsView.swift */,
+				CC2991AD2ABDC79E00283DCE /* EditView.swift */,
+				CC2991AF2ABDE63200283DCE /* WidgetView.swift */,
+				CC4529CD2AC0E9A600DA588F /* WidgetViewModel.swift */,
 			);
 			path = Motivator;
 			sourceTree = "<group>";
@@ -254,7 +272,13 @@
 			files = (
 				CCACB3382AB88F9D00B6C00A /* SettingsView.swift in Sources */,
 				CC32991E2AB0C66800B13A6C /* ContentView.swift in Sources */,
+				CC2991B02ABDE63200283DCE /* WidgetView.swift in Sources */,
+				CC4529CE2AC0E9A600DA588F /* WidgetViewModel.swift in Sources */,
+				CC0067462ABB4CE600AAA1B2 /* DetailsView.swift in Sources */,
+				CC4529D32AC0F17400DA588F /* DataController.swift in Sources */,
 				CC590EDD2AB10B1500B237DB /* ProgressTabView.swift in Sources */,
+				CC2991AE2ABDC79E00283DCE /* EditView.swift in Sources */,
+				CC4529D12AC0F10400DA588F /* WidgetModel.xcdatamodeld in Sources */,
 				CC590EDF2AB114AB00B237DB /* TodayView.swift in Sources */,
 				CC32991C2AB0C66800B13A6C /* MotivatorApp.swift in Sources */,
 			);
@@ -402,10 +426,11 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Motivator/Preview Content\"";
-				DEVELOPMENT_TEAM = 34M43W4NNP;
+				DEVELOPMENT_TEAM = J2ZYT8H56Z;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -421,6 +446,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = Nada.Ashraf.Motivator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -433,10 +459,11 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Motivator/Preview Content\"";
-				DEVELOPMENT_TEAM = 34M43W4NNP;
+				DEVELOPMENT_TEAM = J2ZYT8H56Z;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -452,6 +479,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = Nada.Ashraf.Motivator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -464,9 +492,10 @@
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 34M43W4NNP;
+				DEVELOPMENT_TEAM = J2ZYT8H56Z;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -483,6 +512,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = Nada.Ashraf.Motivator.PushUpsWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -497,9 +527,10 @@
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 34M43W4NNP;
+				DEVELOPMENT_TEAM = J2ZYT8H56Z;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -516,6 +547,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = Nada.Ashraf.Motivator.PushUpsWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -554,6 +586,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		CC4529CF2AC0F10400DA588F /* WidgetModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				CC4529D02AC0F10400DA588F /* WidgetModel.xcdatamodel */,
+			);
+			currentVersion = CC4529D02AC0F10400DA588F /* WidgetModel.xcdatamodel */;
+			path = WidgetModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = CC3299102AB0C66800B13A6C /* Project object */;
 }
