@@ -6,7 +6,11 @@
 //
 
 import CoreData
+import SwiftUI
 class DataController: ObservableObject {
+    @FetchRequest(sortDescriptors: []) var pushUps: FetchedResults<PushUps>
+    
+    @Environment(\.managedObjectContext) var moc
     let container = NSPersistentContainer(name: "WidgetModel")
    
     init() {
@@ -16,4 +20,6 @@ class DataController: ObservableObject {
             }
         }
     }
+    
+    
 }

@@ -6,13 +6,28 @@
 //
 
 import SwiftUI
-public struct WidgetModel : Hashable{
-     var title: String
-     var borderColor: UIColor
-     var championImage: String
-     var calenderImage: String
-     var number: String
-     var calenderNumber: String
-     var championNumber: String
-     var backGroundColor: Color
+final class WidgetViewModel{
+    
+    @AppStorage("Number_Key") var PushUpsCounter = 0
+    @AppStorage("Number_Key") var SitUpsCounter = 0
+
+
+    func getPushUps(){}
+    func getsitUps(){}
+  
+    func increasePushUpsCounter(){
+        PushUpsCounter += 1
+    }
+    
+    func increaseSitsUpsCounter(){
+        SitUpsCounter += 1
+    }
+    
+    func getPushUpsCounter() -> String{
+        return String(PushUpsCounter)
+    }
+    
+    func getSitsUpsCounter() -> String{
+        return String(SitUpsCounter)
+    }
 }

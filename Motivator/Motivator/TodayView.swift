@@ -8,85 +8,122 @@
 import SwiftUI
 
 struct TodayView: View {
+   
     private var twoColumnGrid = [GridItem(.flexible()), GridItem(.flexible())]
-    private var symbols = ["keyboard", "hifispeaker.fill", "printer.fill", "tv.fill", "desktopcomputer", "headphones", "tv.music.note", "mic", "plus.bubble", "video"]
+    var viewModel = WidgetViewModel()
+//    @State var pushupsNumber: String = viewModel.getPushUpsCounter()
+//    @State var situpsNumber: String = viewModel.getSitsUpsCounter()
     
     private var currentWidgets = [
-        WidgetModel(title: "Pushups", borderColor: UIColor(red: 0.18, green: 0.5, blue: 0.93, alpha: 1), championImage: "champion", calenderImage: "calender", number: "10", calenderNumber: "9", championNumber: "12", backGroundColor: Color.white),
+        WidgetModel(title: "Pushups", borderColor: UIColor(red: 0.18, green: 0.5, blue: 0.93, alpha: 1), championImage: "champion", calenderImage: "calender", number: "0", calenderNumber: "9", championNumber: "12", backGroundColor: Color.white),
+    
         WidgetModel(title: "Sit-ups", borderColor: UIColor(red: 0.15, green: 0.68, blue: 0.38, alpha: 1), championImage: "greenChampion", calenderImage: "greenCalender", number: "0", calenderNumber: "12", championNumber: "20", backGroundColor: Color.white),
-        WidgetModel(title: "Brush teeth", borderColor: UIColor.white, championImage: "champion", calenderImage: "calender", number: "25", calenderNumber: "9", championNumber: "12", backGroundColor: Color.orange),
+    
+        WidgetModel(title: "Brush teeth", borderColor: UIColor.white, championImage: "champion", calenderImage: "calender", number: "0", calenderNumber: "9", championNumber: "12", backGroundColor: Color.orange),
+      
         WidgetModel(title: "", borderColor: UIColor.white, championImage: "champion", calenderImage: "calender", number: "25", calenderNumber: "9", championNumber: "12", backGroundColor: Color("Grey6")),
         
     ]
     
     var body: some View {
-        ScrollView {
+        VStack{
             Text(getTodaysDate())
                 .font(.system(size: 40, weight: .bold, design: .none))
                 .foregroundColor(Color("Grey3"))
                 .padding(.bottom, 24.0)
-            
-            LazyVGrid(columns: twoColumnGrid) {
-                ForEach(Array(currentWidgets.enumerated()), id: \.element) { index, element in
-                    WidgetView(title: element.title, borderColor: element.borderColor, championImage: element.championImage, calenderImage: element.calenderImage, number: element.number, calenderNumber: element.calenderNumber, championNumber: element.championNumber)
-                        .background(element.backGroundColor)
-                        .cornerRadius(25)
-                        .padding(element.title.isEmpty ? 57 : 0)
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 25)
-                                .stroke(Color("Grey4"), lineWidth: 1)
-                        )
-                }
-            }.padding(.horizontal, 16)
-        }.background(Color("Grey6"))
+              
+            HStack{
+                pushUpsWidget
+               sitUpsWidget
+            }
+        }
+        
     }
     
-  
-    var v : some View{
-        VStack{
-            VStack{
+    var pushUpsWidget: some View{
+            VStack(spacing: 10) {
+                Text("Pushups")
+                    .font(.system(size: 27, weight: .medium))
+                    .foregroundColor(Color(UIColor(red: 0.18, green: 0.5, blue: 0.93, alpha: 1)))
+                    .padding(.horizontal, 10)
+                    .padding(.vertical, 15)
+                
+                HStack(spacing: 27){
+                    Button(action: {
+                       
+                    }) { Image("minus") }
+                    Text(viewModel.getPushUpsCounter())
+                        .foregroundColor(Color(UIColor(red: 0.18, green: 0.5, blue: 0.93, alpha: 1)).opacity(0.5))
+                        .font(.system(size: 36, weight: .heavy))
+                    Image("plus").onTapGesture {
+                        viewModel.increasePushUpsCounter()
+                        //pushupsNumber = viewModel.getPushUpsCounter()
+                    }
+                }.padding(.bottom, 10)
+                
                 HStack{
-                    WidgetView(title: "Pushups", borderColor: UIColor(red: 0.18, green: 0.5, blue: 0.93, alpha: 1), championImage: "champion", calenderImage: "calender", number: "10", calenderNumber: "9", championNumber: "12")
-                        .background(Color.white)
-                        .cornerRadius(25)
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 25)
-                                .stroke(Color("Grey5"), lineWidth: 1)
-                        )
-                        .padding(.leading, 16)
+                    HStack(spacing: 5){
+                        Image("calender")
+                        Text("0")
+                            .foregroundColor(Color(UIColor(red: 0.18, green: 0.5, blue: 0.93, alpha: 1)).opacity(0.5))
+                            .font(.system(size: 24))
+                    }.padding(.leading, 20)
                     
-                    WidgetView(title: "Sit-ups", borderColor: UIColor(red: 0.15, green: 0.68, blue: 0.38, alpha: 1), championImage: "greenChampion", calenderImage: "greenCalender", number: "0", calenderNumber: "12", championNumber: "20")
-                        .background(Color.white)
-                        .cornerRadius(25)
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 25)
-                                .stroke(Color("Grey5"), lineWidth: 1)
-                        )
-                        .padding(.trailing, 16)
-                }
-                HStack{
-                    WidgetView(title: "Brush teeth", borderColor: UIColor.white, championImage: "champion", calenderImage: "calender", number: "25", calenderNumber: "9", championNumber: "12")
-                        .background(Color.orange)
-                        .cornerRadius(25)
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 25)
-                                .stroke(Color("Grey5"), lineWidth: 1)
-                        )
-                        .padding(.leading, 16)
+                    Spacer()
                     
-                    Image("plusCircle")
-                        .background(Color.white)
-                        .cornerRadius(25)
-                        .padding(60)
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 25)
-                                .stroke(Color("Grey5"), lineWidth: 1)
-                        )
-                        .padding(.trailing, 16)
+                    HStack(spacing: 3){
+                        Image("champion")
+                        Text("12")
+                            .foregroundColor(Color(UIColor(red: 0.18, green: 0.5, blue: 0.93, alpha: 1)).opacity(0.5))
+                            .font(.system(size: 24))
+                    }.padding(.trailing, 10)
                 }
+                .padding(.bottom, 16.0)
             }
-            Spacer()
-        }
+        
+    }
+    
+    var sitUpsWidget: some View{
+            VStack(spacing: 10) {
+                Text("Situps")
+                    .font(.system(size: 27, weight: .medium))
+                    .foregroundColor(Color(UIColor(red: 0.18, green: 0.5, blue: 0.93, alpha: 1)))
+                    .padding(.horizontal, 10)
+                    .padding(.vertical, 15)
+                
+                HStack(spacing: 27){
+                    Button(action: {
+                       
+                    }) { Image("minus") }
+                    Text(viewModel.getSitsUpsCounter())
+                        .foregroundColor(Color(UIColor(red: 0.18, green: 0.5, blue: 0.93, alpha: 1)).opacity(0.5))
+                        .font(.system(size: 36, weight: .heavy))
+                    Image("plus").onTapGesture {
+                        viewModel.increaseSitsUpsCounter()
+                        //situpsNumber = viewModel.getSitsUpsCounter()
+                    }
+                }.padding(.bottom, 10)
+                
+                HStack{
+                    HStack(spacing: 5){
+                        Image("calender")
+                        Text("0")
+                            .foregroundColor(Color(UIColor(red: 0.18, green: 0.5, blue: 0.93, alpha: 1)).opacity(0.5))
+                            .font(.system(size: 24))
+                    }.padding(.leading, 20)
+                    
+                    Spacer()
+                    
+                    HStack(spacing: 3){
+                        Image("champion")
+                        Text("12")
+                            .foregroundColor(Color(UIColor(red: 0.18, green: 0.5, blue: 0.93, alpha: 1)).opacity(0.5))
+                            .font(.system(size: 24))
+                    }.padding(.trailing, 10)
+                }
+                .padding(.bottom, 16.0)
+            }
+        
     }
     
     func getTodaysDate() -> String{
@@ -95,6 +132,7 @@ struct TodayView: View {
         dateFormatter.dateFormat = "dd/MM/YYYY"
         return dateFormatter.string(from: date)
     }
+
 }
 
 struct TodayView_Previews: PreviewProvider {
