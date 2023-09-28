@@ -19,51 +19,50 @@ struct WidgetView: View {
     @State var championNumber: String = "0"
     
     var body: some View {
-        Text("")
-//        if title.isEmpty {
-//            Image("plusCircle")
-//        }
-//        else{
-//            VStack(spacing: 10) {
-//                Text(title)
-//                    .font(.system(size: 27, weight: .medium))
-//                    .foregroundColor(Color(borderColor))
-//                    .padding(.horizontal, 10)
-//                    .padding(.vertical, 15)
-//                
-//                HStack(spacing: 27){
-//                    Button(action: {
-//                       
-//                    }) { Image("minus") }
-//                    Text(number)
-//                        .foregroundColor(Color(borderColor).opacity(0.5))
-//                        .font(.system(size: 36, weight: .heavy))
-//                    Image("plus").onTapGesture {
-//                        viewModel.increaseCounter(title: title)
-//                        number = viewModel.getCounter(title: title)
-//                    }
-//                }.padding(.bottom, 10)
-//                
-//                HStack{
-//                    HStack(spacing: 5){
-//                        Image(calenderImage)
-//                        Text(calenderNumber)
-//                            .foregroundColor(Color(borderColor).opacity(0.5))
-//                            .font(.system(size: 24))
-//                    }.padding(.leading, 20)
-//                    
-//                    Spacer()
-//                    
-//                    HStack(spacing: 3){
-//                        Image(championImage)
-//                        Text(championNumber)
-//                            .foregroundColor(Color(borderColor).opacity(0.5))
-//                            .font(.system(size: 24))
-//                    }.padding(.trailing, 10)
-//                }
-//                .padding(.bottom, 16.0)
-//            }
-//        }
+        
+        if title.isEmpty {
+            Image("plusCircle")
+        }
+        else{
+            VStack(spacing: 10) {
+                Text(title)
+                    .font(.system(size: 27, weight: .medium))
+                    .foregroundColor(Color(borderColor))
+                    .padding(.horizontal, 10)
+                    .padding(.vertical, 15)
+                
+                HStack(spacing: 27){
+                    Button(action: {
+                       
+                    }) { Image("minus") }
+                    Text(number)
+                        .foregroundColor(Color(borderColor).opacity(0.5))
+                        .font(.system(size: 36, weight: .heavy))
+                    Image("plus").onTapGesture {
+                        viewModel.increasePushUpsCounter()
+                    }
+                }.padding(.bottom, 10)
+                
+                HStack{
+                    HStack(spacing: 5){
+                        Image(calenderImage)
+                        Text(calenderNumber)
+                            .foregroundColor(Color(borderColor).opacity(0.5))
+                            .font(.system(size: 24))
+                    }.padding(.leading, 20)
+                    
+                    Spacer()
+                    
+                    HStack(spacing: 3){
+                        Image(championImage)
+                        Text(championNumber)
+                            .foregroundColor(Color(borderColor).opacity(0.5))
+                            .font(.system(size: 24))
+                    }.padding(.trailing, 10)
+                }
+                .padding(.bottom, 16.0)
+            }
+        }
     }
 }
 

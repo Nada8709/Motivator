@@ -6,28 +6,33 @@
 //
 
 import SwiftUI
-final class WidgetViewModel{
+final class WidgetViewModel: ObservableObject{
     
-    @AppStorage("Number_Key") var PushUpsCounter = 0
-    @AppStorage("Number_Key") var SitUpsCounter = 0
+    @AppStorage("PushUpsCounter") var PushUpsCounter = 0
+    @AppStorage("SitUpsCounter") var SitUpsCounter = 0
+    @AppStorage("BrushTeethCounter") var BrushTeethCounter = 0
 
-
-    func getPushUps(){}
-    func getsitUps(){}
-  
     func increasePushUpsCounter(){
         PushUpsCounter += 1
+    }
+    
+    func decreasePushUpsCounter(){
+        PushUpsCounter -= 1
     }
     
     func increaseSitsUpsCounter(){
         SitUpsCounter += 1
     }
     
-    func getPushUpsCounter() -> String{
-        return String(PushUpsCounter)
+    func decreaseSitsUpsCounter(){
+        SitUpsCounter -= 1
     }
     
-    func getSitsUpsCounter() -> String{
-        return String(SitUpsCounter)
+    func increaseBrushTeethCounter(){
+        BrushTeethCounter += 1
+    }
+    
+    func decreaseBrushTeethCounter(){
+        BrushTeethCounter -= 1
     }
 }
