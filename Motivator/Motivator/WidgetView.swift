@@ -39,7 +39,7 @@ struct WidgetView: View {
                         .foregroundColor(Color(borderColor).opacity(0.5))
                         .font(.system(size: 36, weight: .heavy))
                     Image("plus").onTapGesture {
-                        viewModel.increasePushUpsCounter()
+                        //viewModel.increasePushUpsCounter()
                     }
                 }.padding(.bottom, 10)
                 

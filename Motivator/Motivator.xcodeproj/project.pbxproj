@@ -20,6 +20,7 @@
 		CC590EDD2AB10B1500B237DB /* ProgressTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC590EDC2AB10B1500B237DB /* ProgressTabView.swift */; };
 		CC590EDF2AB114AB00B237DB /* TodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC590EDE2AB114AA00B237DB /* TodayView.swift */; };
 		CCACB3382AB88F9D00B6C00A /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCACB3372AB88F9D00B6C00A /* SettingsView.swift */; };
+		CCCEC9D92ACAFC2800386DFC /* PlusIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF3F21C2ACACED700DB8ED7 /* PlusIntent.swift */; };
 		CCD08D422AB8D3C500D3C940 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC590EE62AB116D300B237DB /* WidgetKit.framework */; };
 		CCD08D432AB8D3C500D3C940 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC590EE82AB116D300B237DB /* SwiftUI.framework */; };
 		CCD08D462AB8D3C500D3C940 /* PushUpsWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD08D452AB8D3C500D3C940 /* PushUpsWidgetBundle.swift */; };
@@ -28,6 +29,8 @@
 		CCD08D4C2AB8D3C500D3C940 /* AppIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD08D4B2AB8D3C500D3C940 /* AppIntent.swift */; };
 		CCD08D4E2AB8D3C700D3C940 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCD08D4D2AB8D3C700D3C940 /* Assets.xcassets */; };
 		CCD08D522AB8D3C700D3C940 /* PushUpsWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = CCD08D412AB8D3C500D3C940 /* PushUpsWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		CCF3F21D2ACACED700DB8ED7 /* PlusIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF3F21C2ACACED700DB8ED7 /* PlusIntent.swift */; };
+		CCF3F21E2ACAD00800DB8ED7 /* WidgetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4529CD2AC0E9A600DA588F /* WidgetViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +80,7 @@
 		CCD08D4B2AB8D3C500D3C940 /* AppIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIntent.swift; sourceTree = "<group>"; };
 		CCD08D4D2AB8D3C700D3C940 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CCD08D4F2AB8D3C700D3C940 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CCF3F21C2ACACED700DB8ED7 /* PlusIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlusIntent.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +167,7 @@
 				CCD08D4B2AB8D3C500D3C940 /* AppIntent.swift */,
 				CCD08D4D2AB8D3C700D3C940 /* Assets.xcassets */,
 				CCD08D4F2AB8D3C700D3C940 /* Info.plist */,
+				CCF3F21C2ACACED700DB8ED7 /* PlusIntent.swift */,
 			);
 			path = PushUpsWidget;
 			sourceTree = "<group>";
@@ -269,6 +274,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CCACB3382AB88F9D00B6C00A /* SettingsView.swift in Sources */,
+				CCCEC9D92ACAFC2800386DFC /* PlusIntent.swift in Sources */,
 				CC32991E2AB0C66800B13A6C /* ContentView.swift in Sources */,
 				CC0622F42AC308040032A254 /* DataModels.swift in Sources */,
 				CC2991B02ABDE63200283DCE /* WidgetView.swift in Sources */,
@@ -286,6 +292,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CCF3F21E2ACAD00800DB8ED7 /* WidgetViewModel.swift in Sources */,
+				CCF3F21D2ACACED700DB8ED7 /* PlusIntent.swift in Sources */,
 				CCD08D462AB8D3C500D3C940 /* PushUpsWidgetBundle.swift in Sources */,
 				CCD08D4C2AB8D3C500D3C940 /* AppIntent.swift in Sources */,
 				CCD08D482AB8D3C500D3C940 /* PushUpsWidgetLiveActivity.swift in Sources */,

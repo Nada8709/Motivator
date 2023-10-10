@@ -9,6 +9,8 @@ import SwiftUI
 
 struct EditView: View {
     @State var text = "Keep your back straight!"
+    @State var selectedProgressMetric = ""
+    var color = ["ddddd", "rrrr"]
     var body: some View {
         VStack{
             NavigationView{
@@ -43,7 +45,8 @@ struct EditView: View {
                         
                         notesView
                         nameView.padding(.bottom, 22.0)
-                        progressMetricView.padding(.bottom, 22.0)
+                        progressMetricView
+                            .padding(.bottom, 22.0)
                         goalMetricView.padding(.bottom, 22.0)
                         
                     }.padding(.horizontal, 16.0)
@@ -97,17 +100,13 @@ struct EditView: View {
                     .foregroundColor(Color("Black-White"))
             }
            
-            HStack{
-                Text("Past 7 day average")
-                    .font(.system(size: 17, weight: .medium))
-                    .foregroundColor(Color(UIColor(red: 0.24, green: 0.24, blue: 0.26, alpha: 0.3)))
-                    .padding(.vertical, 11)
-                    .padding(.leading, 16)
-                    
-                Spacer()
-                Image("arrow")
-                    .padding(.trailing, 16)
-            }.background(Color.white)
+            Picker("Please choose a color", selection: $selectedProgressMetric) {
+                ForEach(color, id: \.self) {
+                    Text($0)
+                }
+            }
+            .frame(width: .infinity, alignment: .leading)
+            .background(Color.white)
             .cornerRadius(10)
             .overlay(
                 RoundedRectangle(cornerRadius: 10)

@@ -58,13 +58,13 @@ struct PushUpsWidgetEntryView : View {
     var middleView: some View{
         HStack(spacing: 20){
             
-        Button("", image: ImageResource(name: "minus", bundle: .main), intent: PlusButton()).buttonStyle(PlainButtonStyle())
+            Button("", image: ImageResource(name: "minus", bundle: .main), intent: PlusButton()).buttonStyle(PlainButtonStyle())
             
-            Text("0")
+            Text(String(WidgetViewModel.shared.savedPushUps.last?.counter ?? 0))
                 .foregroundColor(Color(UIColor(red: 0.18, green: 0.5, blue: 0.93, alpha: 1)).opacity(0.5))
                 .font(.system(size: 36))
-         
-            Button("", image: ImageResource(name: "plus", bundle: .main), intent: PlusButton()).buttonStyle(PlainButtonStyle())
+            
+            Button("", image: ImageResource(name: "plus", bundle: .main), intent: PlusIntent(widgetType: "")).buttonStyle(PlainButtonStyle())
         }
     }
     
@@ -126,6 +126,40 @@ extension ConfigurationAppIntent {
     static var title: LocalizedStringResource = "plus button is pressed"
     
     func perform() async throws -> some IntentResult {
+        return .result()
+    }
+}
+struct PlusIntent: AppIntent {
+    init() {
+        
+    }
+    
+    static var title: LocalizedStringResource = "PlusIntent"
+   
+    // An example configurable parameter.
+    @Parameter(title: "widgetType")
+    var widgetType: String
+    
+    init(widgetType: String) {
+        self.widgetType = widgetType
+    }
+    
+    func perform() async throws -> some IntentResult {
+        
+        //Update DataBase
+        if WidgetViewModel.shared.isInSameDay(lastAddedDate: WidgetViewModel.shared.savedPushUps.last?.date ?? Date()){
+           let temp = (WidgetViewModel.shared.savedPushUps.last?.counter ?? 0) + 1
+            if WidgetViewModel.shared.savedPushUps.count > 0 {
+                WidgetViewModel.shared.savedPushUps.removeLast()
+            }
+            WidgetViewModel.shared.savedPushUps.append(CounterModels(counter: temp, date: Date()))
+        }
+       
+        else {
+            WidgetViewModel.shared.savedPushUps.append(CounterModels(counter: (WidgetViewModel.shared.savedPushUps.last?.counter ?? 0) + 1 , date: Date()))
+        }
+        
+        print("updated")
         return .result()
     }
 }
