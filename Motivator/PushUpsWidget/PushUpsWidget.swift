@@ -10,11 +10,11 @@ import SwiftUI
 import AppIntents
 struct Provider: AppIntentTimelineProvider {
     func placeholder(in context: Context) -> SimpleEntry {
-        SimpleEntry(date: Date(), configuration: ConfigurationAppIntent())
+        SimpleEntry(date: Date(), configuration: ConfigurationAppIntent(), count: getCount())
     }
 
     func snapshot(for configuration: ConfigurationAppIntent, in context: Context) async -> SimpleEntry {
-        SimpleEntry(date: Date(), configuration: configuration)
+        SimpleEntry(date: Date(), configuration: configuration, count: getCount())
     }
     
     func timeline(for configuration: ConfigurationAppIntent, in context: Context) async -> Timeline<SimpleEntry> {
@@ -24,17 +24,27 @@ struct Provider: AppIntentTimelineProvider {
         let currentDate = Date()
         for hourOffset in 0 ..< 5 {
             let entryDate = Calendar.current.date(byAdding: .hour, value: hourOffset, to: currentDate)!
-            let entry = SimpleEntry(date: entryDate, configuration: configuration)
+            let entry = SimpleEntry(date: Date(), configuration: configuration, count: getCount())
             entries.append(entry)
         }
 
         return Timeline(entries: entries, policy: .atEnd)
+    }
+    
+    func getCount() -> Int{
+        if let store = UserDefaults(suiteName: "group.Nada.Ashraf.Motivator"){
+            return store.integer(forKey: "PushUpsCounter")
+        }
+        else{
+            return -1
+        }
     }
 }
 
 struct SimpleEntry: TimelineEntry {
     let date: Date
     let configuration: ConfigurationAppIntent
+    let count: Int
 }
 
 struct PushUpsWidgetEntryView : View {
@@ -58,13 +68,13 @@ struct PushUpsWidgetEntryView : View {
     var middleView: some View{
         HStack(spacing: 20){
             
-            Button("", image: ImageResource(name: "minus", bundle: .main), intent: PlusButton()).buttonStyle(PlainButtonStyle())
+            Button("", image: ImageResource(name: "minus", bundle: .main), intent: IncreaseCountIntent()).buttonStyle(PlainButtonStyle())
             
-            Text(String(WidgetViewModel.shared.savedPushUps.last?.counter ?? 0))
+            Text(String(entry.count))
                 .foregroundColor(Color(UIColor(red: 0.18, green: 0.5, blue: 0.93, alpha: 1)).opacity(0.5))
                 .font(.system(size: 36))
             
-            Button("", image: ImageResource(name: "plus", bundle: .main), intent: PlusIntent(widgetType: "")).buttonStyle(PlainButtonStyle())
+            Button("", image: ImageResource(name: "plus", bundle: .main), intent: IncreaseCountIntent()).buttonStyle(PlainButtonStyle())
         }
     }
     
@@ -118,8 +128,8 @@ extension ConfigurationAppIntent {
 #Preview(as: .systemSmall) {
     PushUpsWidget()
 } timeline: {
-    SimpleEntry(date: .now, configuration: .smiley)
-    SimpleEntry(date: .now, configuration: .starEyes)
+    SimpleEntry(date: .now, configuration: .smiley, count: 2)
+    SimpleEntry(date: .now, configuration: .starEyes, count: 2)
 }
 
  struct PlusButton: AppIntent{

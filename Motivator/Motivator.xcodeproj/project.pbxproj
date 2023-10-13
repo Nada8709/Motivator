@@ -20,7 +20,8 @@
 		CC590EDD2AB10B1500B237DB /* ProgressTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC590EDC2AB10B1500B237DB /* ProgressTabView.swift */; };
 		CC590EDF2AB114AB00B237DB /* TodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC590EDE2AB114AA00B237DB /* TodayView.swift */; };
 		CCACB3382AB88F9D00B6C00A /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCACB3372AB88F9D00B6C00A /* SettingsView.swift */; };
-		CCCEC9D92ACAFC2800386DFC /* PlusIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF3F21C2ACACED700DB8ED7 /* PlusIntent.swift */; };
+		CCC0DF212AD605B30094BD72 /* IncreaseCountIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC0DF202AD605B30094BD72 /* IncreaseCountIntent.swift */; };
+		CCC0DF222AD605BF0094BD72 /* IncreaseCountIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC0DF202AD605B30094BD72 /* IncreaseCountIntent.swift */; };
 		CCD08D422AB8D3C500D3C940 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC590EE62AB116D300B237DB /* WidgetKit.framework */; };
 		CCD08D432AB8D3C500D3C940 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC590EE82AB116D300B237DB /* SwiftUI.framework */; };
 		CCD08D462AB8D3C500D3C940 /* PushUpsWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD08D452AB8D3C500D3C940 /* PushUpsWidgetBundle.swift */; };
@@ -29,7 +30,6 @@
 		CCD08D4C2AB8D3C500D3C940 /* AppIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD08D4B2AB8D3C500D3C940 /* AppIntent.swift */; };
 		CCD08D4E2AB8D3C700D3C940 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCD08D4D2AB8D3C700D3C940 /* Assets.xcassets */; };
 		CCD08D522AB8D3C700D3C940 /* PushUpsWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = CCD08D412AB8D3C500D3C940 /* PushUpsWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		CCF3F21D2ACACED700DB8ED7 /* PlusIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF3F21C2ACACED700DB8ED7 /* PlusIntent.swift */; };
 		CCF3F21E2ACAD00800DB8ED7 /* WidgetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4529CD2AC0E9A600DA588F /* WidgetViewModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -60,6 +60,8 @@
 /* Begin PBXFileReference section */
 		CC0067452ABB4CE600AAA1B2 /* DetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsView.swift; sourceTree = "<group>"; };
 		CC0622F32AC308040032A254 /* DataModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DataModels.swift; path = Motivator/Data/DataModels.swift; sourceTree = "<group>"; };
+		CC143A732AD5CD710002BD3B /* Motivator.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Motivator.entitlements; sourceTree = "<group>"; };
+		CC143A742AD5CE4B0002BD3B /* PushUpsWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PushUpsWidgetExtension.entitlements; sourceTree = "<group>"; };
 		CC2991AD2ABDC79E00283DCE /* EditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditView.swift; sourceTree = "<group>"; };
 		CC2991AF2ABDE63200283DCE /* WidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetView.swift; sourceTree = "<group>"; };
 		CC3299182AB0C66800B13A6C /* Motivator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Motivator.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -73,6 +75,7 @@
 		CC590EE62AB116D300B237DB /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		CC590EE82AB116D300B237DB /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		CCACB3372AB88F9D00B6C00A /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		CCC0DF202AD605B30094BD72 /* IncreaseCountIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncreaseCountIntent.swift; sourceTree = "<group>"; };
 		CCD08D412AB8D3C500D3C940 /* PushUpsWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = PushUpsWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCD08D452AB8D3C500D3C940 /* PushUpsWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushUpsWidgetBundle.swift; sourceTree = "<group>"; };
 		CCD08D472AB8D3C500D3C940 /* PushUpsWidgetLiveActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushUpsWidgetLiveActivity.swift; sourceTree = "<group>"; };
@@ -80,7 +83,6 @@
 		CCD08D4B2AB8D3C500D3C940 /* AppIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIntent.swift; sourceTree = "<group>"; };
 		CCD08D4D2AB8D3C700D3C940 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CCD08D4F2AB8D3C700D3C940 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CCF3F21C2ACACED700DB8ED7 /* PlusIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlusIntent.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 		CC32990F2AB0C66800B13A6C = {
 			isa = PBXGroup;
 			children = (
+				CC143A742AD5CE4B0002BD3B /* PushUpsWidgetExtension.entitlements */,
 				CC0622F32AC308040032A254 /* DataModels.swift */,
 				CC32991A2AB0C66800B13A6C /* Motivator */,
 				CCD08D442AB8D3C500D3C940 /* PushUpsWidget */,
@@ -126,6 +129,7 @@
 		CC32991A2AB0C66800B13A6C /* Motivator */ = {
 			isa = PBXGroup;
 			children = (
+				CC143A732AD5CD710002BD3B /* Motivator.entitlements */,
 				CC32991B2AB0C66800B13A6C /* MotivatorApp.swift */,
 				CC32991D2AB0C66800B13A6C /* ContentView.swift */,
 				CC32991F2AB0C66A00B13A6C /* Assets.xcassets */,
@@ -167,7 +171,7 @@
 				CCD08D4B2AB8D3C500D3C940 /* AppIntent.swift */,
 				CCD08D4D2AB8D3C700D3C940 /* Assets.xcassets */,
 				CCD08D4F2AB8D3C700D3C940 /* Info.plist */,
-				CCF3F21C2ACACED700DB8ED7 /* PlusIntent.swift */,
+				CCC0DF202AD605B30094BD72 /* IncreaseCountIntent.swift */,
 			);
 			path = PushUpsWidget;
 			sourceTree = "<group>";
@@ -274,11 +278,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				CCACB3382AB88F9D00B6C00A /* SettingsView.swift in Sources */,
-				CCCEC9D92ACAFC2800386DFC /* PlusIntent.swift in Sources */,
 				CC32991E2AB0C66800B13A6C /* ContentView.swift in Sources */,
 				CC0622F42AC308040032A254 /* DataModels.swift in Sources */,
 				CC2991B02ABDE63200283DCE /* WidgetView.swift in Sources */,
 				CC4529CE2AC0E9A600DA588F /* WidgetViewModel.swift in Sources */,
+				CCC0DF212AD605B30094BD72 /* IncreaseCountIntent.swift in Sources */,
 				CC0067462ABB4CE600AAA1B2 /* DetailsView.swift in Sources */,
 				CC590EDD2AB10B1500B237DB /* ProgressTabView.swift in Sources */,
 				CC2991AE2ABDC79E00283DCE /* EditView.swift in Sources */,
@@ -293,11 +297,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				CCF3F21E2ACAD00800DB8ED7 /* WidgetViewModel.swift in Sources */,
-				CCF3F21D2ACACED700DB8ED7 /* PlusIntent.swift in Sources */,
 				CCD08D462AB8D3C500D3C940 /* PushUpsWidgetBundle.swift in Sources */,
 				CCD08D4C2AB8D3C500D3C940 /* AppIntent.swift in Sources */,
 				CCD08D482AB8D3C500D3C940 /* PushUpsWidgetLiveActivity.swift in Sources */,
 				CCD08D4A2AB8D3C500D3C940 /* PushUpsWidget.swift in Sources */,
+				CCC0DF222AD605BF0094BD72 /* IncreaseCountIntent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -432,6 +436,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Motivator/Motivator.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -465,6 +470,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Motivator/Motivator.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -498,6 +504,7 @@
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = PushUpsWidgetExtension.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -533,6 +540,7 @@
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = PushUpsWidgetExtension.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;

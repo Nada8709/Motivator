@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject var viewModel = WidgetViewModel()
     init() {
     UITabBar.appearance().backgroundColor = UIColor(red: 0.98, green: 0.98, blue: 0.98, alpha: 0.94)
     }

@@ -13,6 +13,7 @@ struct MotivatorApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .defaultAppStorage(UserDefaults(suiteName: "group.Nada.Ashraf.Motivator")!)
         }
     }
 }
