@@ -9,6 +9,8 @@ import SwiftUI
 import WidgetKit
 struct TodayView: View {
     @AppStorage("PushUpsCounter") var pushUpsCounter = 0
+    @AppStorage("SitUpsCounter") var sitUpsCounter = 0
+    @AppStorage("BrushTeethCounter") var brushTeethCounter = 0
 
     private var twoColumnGrid = [GridItem(.flexible()), GridItem(.flexible())]
     @StateObject var viewModel = WidgetViewModel()
@@ -104,21 +106,8 @@ struct TodayView: View {
                     .font(.system(size: 36, weight: .heavy))
                 
                 Image("plus").onTapGesture {
-//                    if viewModel.isInSameDay(lastAddedDate: viewModel.savedPushUps.last?.date ?? Date()){
-//                       let temp = (viewModel.savedPushUps.last?.counter ?? 0) + 1
-//                        if viewModel.savedPushUps.count > 0 {
-//                            viewModel.savedPushUps.removeLast()
-//                            WidgetCenter.shared.reloadAllTimelines()
-//                        }
-//                        viewModel.savedPushUps.append(CounterModels(counter: temp, date: Date()))
-//                        WidgetCenter.shared.reloadAllTimelines()
-//                    }
-//                   
-//                    else {
-//                        viewModel.savedPushUps.append(CounterModels(counter: (viewModel.savedPushUps.last?.counter ?? 0) + 1 , date: Date()))
-//                        WidgetCenter.shared.reloadAllTimelines()
-//                    }
                     pushUpsCounter += 1
+                    viewModel.checkTime()
                     WidgetCenter.shared.reloadAllTimelines()
 
                 }
@@ -171,17 +160,9 @@ struct TodayView: View {
                     .foregroundColor(Color(UIColor(red: 0.15, green: 0.68, blue: 0.38, alpha: 1)).opacity(0.5))
                     .font(.system(size: 36, weight: .heavy))
                 Image("plus").onTapGesture {
-                    if viewModel.isInSameDay(lastAddedDate: viewModel.savedSitUps.last?.date ?? Date()){
-                       let temp = (viewModel.savedSitUps.last?.counter ?? 0) + 1
-                        if viewModel.savedSitUps.count > 0 {
-                            viewModel.savedSitUps.removeLast()
-                        }
-                        viewModel.savedSitUps.append(CounterModels(counter: temp, date: Date()))
-                    }
-                   
-                    else {
-                        viewModel.savedSitUps.append(CounterModels(counter: (viewModel.savedSitUps.last?.counter ?? 0) + 1 , date: Date()))
-                    }
+                    sitUpsCounter += 1
+                    viewModel.checkTime()
+                    WidgetCenter.shared.reloadAllTimelines()
                 }
             }.padding(.bottom, 10)
             

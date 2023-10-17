@@ -1,13 +1,14 @@
 //
-//  PushUpsWidget.swift
-//  PushUpsWidget
+//  SitupsWidget.swift
+//  SitupsWidget
 //
-//  Created by NadaAshraf on 18/09/2023.
+//  Created by NadaAshraf on 17/10/2023.
 //
 
 import WidgetKit
 import SwiftUI
 import AppIntents
+
 struct Provider: AppIntentTimelineProvider {
     func placeholder(in context: Context) -> SimpleEntry {
         SimpleEntry(date: Date(), configuration: ConfigurationAppIntent(), count: getCount())
@@ -33,7 +34,7 @@ struct Provider: AppIntentTimelineProvider {
     
     func getCount() -> Int{
         if let store = UserDefaults(suiteName: "group.Nada.Ashraf.Motivator"){
-            return store.integer(forKey: "PushUpsCounter")
+            return store.integer(forKey: "SitUpsCounter")
         }
         else{
             return -1
@@ -47,13 +48,13 @@ struct SimpleEntry: TimelineEntry {
     let count: Int
 }
 
-struct PushUpsWidgetEntryView : View {
+struct SitupsWidgetEntryView : View {
     private let greyColor = Color(UIColor(red: 0.74, green: 0.74, blue: 0.74, alpha: 1))
     var entry: Provider.Entry
     
     var body: some View {
         VStack {
-            Text("Pushups")
+            Text("SitUps")
                 .font(.system(size: 27))
                 .foregroundColor(Color(UIColor(red: 0.18, green: 0.5, blue: 0.93, alpha: 1)))
                 .padding(.horizontal, 10)
@@ -68,13 +69,13 @@ struct PushUpsWidgetEntryView : View {
     var middleView: some View{
         HStack(spacing: 20){
             
-            Button("", image: ImageResource(name: "minus", bundle: .main), intent: IncreasePushUpsCountIntent()).buttonStyle(PlainButtonStyle())
+            Button("", image: ImageResource(name: "minus", bundle: .main), intent: IncreaseSitupsCountIntent()).buttonStyle(PlainButtonStyle())
             
             Text(String(entry.count))
                 .foregroundColor(Color(UIColor(red: 0.18, green: 0.5, blue: 0.93, alpha: 1)).opacity(0.5))
                 .font(.system(size: 36))
             
-            Button("", image: ImageResource(name: "plus", bundle: .main), intent: IncreasePushUpsCountIntent()).buttonStyle(PlainButtonStyle())
+            Button("", image: ImageResource(name: "plus", bundle: .main), intent: IncreaseSitupsCountIntent()).buttonStyle(PlainButtonStyle())
         }
     }
     
@@ -100,12 +101,12 @@ struct PushUpsWidgetEntryView : View {
     
 }
 
-struct PushUpsWidget: Widget {
-    let kind: String = "PushUpsWidget"
+struct SitupsWidget: Widget {
+    let kind: String = "SitupsWidget"
 
     var body: some WidgetConfiguration {
         AppIntentConfiguration(kind: kind, intent: ConfigurationAppIntent.self, provider: Provider()) { entry in
-            PushUpsWidgetEntryView(entry: entry)
+            SitupsWidgetEntryView(entry: entry)
                 .containerBackground(.fill.tertiary, for: .widget)
         }
     }
@@ -126,7 +127,7 @@ extension ConfigurationAppIntent {
 }
 
 #Preview(as: .systemSmall) {
-    PushUpsWidget()
+    SitupsWidget()
 } timeline: {
     SimpleEntry(date: .now, configuration: .smiley, count: 2)
     SimpleEntry(date: .now, configuration: .starEyes, count: 2)

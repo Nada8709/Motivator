@@ -16,12 +16,22 @@
 		CC32991E2AB0C66800B13A6C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC32991D2AB0C66800B13A6C /* ContentView.swift */; };
 		CC3299202AB0C66A00B13A6C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC32991F2AB0C66A00B13A6C /* Assets.xcassets */; };
 		CC3299232AB0C66A00B13A6C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC3299222AB0C66A00B13A6C /* Preview Assets.xcassets */; };
+		CC3D1EFC2ADF126800DF73AD /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC590EE62AB116D300B237DB /* WidgetKit.framework */; };
+		CC3D1EFD2ADF126800DF73AD /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC590EE82AB116D300B237DB /* SwiftUI.framework */; };
+		CC3D1F002ADF126800DF73AD /* SitupsWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3D1EFF2ADF126800DF73AD /* SitupsWidgetBundle.swift */; };
+		CC3D1F022ADF126800DF73AD /* SitupsWidgetLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3D1F012ADF126800DF73AD /* SitupsWidgetLiveActivity.swift */; };
+		CC3D1F042ADF126800DF73AD /* SitupsWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3D1F032ADF126800DF73AD /* SitupsWidget.swift */; };
+		CC3D1F062ADF126800DF73AD /* AppIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3D1F052ADF126800DF73AD /* AppIntent.swift */; };
+		CC3D1F082ADF126800DF73AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC3D1F072ADF126800DF73AD /* Assets.xcassets */; };
+		CC3D1F102ADF13C200DF73AD /* IncreasePushUpsCountIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC0DF202AD605B30094BD72 /* IncreasePushUpsCountIntent.swift */; };
+		CC3D1F112ADF153000DF73AD /* SitupsWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = CC3D1EFB2ADF126800DF73AD /* SitupsWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		CC3D1F132ADF157B00DF73AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCD08D4D2AB8D3C700D3C940 /* Assets.xcassets */; };
 		CC4529CE2AC0E9A600DA588F /* WidgetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4529CD2AC0E9A600DA588F /* WidgetViewModel.swift */; };
 		CC590EDD2AB10B1500B237DB /* ProgressTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC590EDC2AB10B1500B237DB /* ProgressTabView.swift */; };
 		CC590EDF2AB114AB00B237DB /* TodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC590EDE2AB114AA00B237DB /* TodayView.swift */; };
 		CCACB3382AB88F9D00B6C00A /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCACB3372AB88F9D00B6C00A /* SettingsView.swift */; };
-		CCC0DF212AD605B30094BD72 /* IncreaseCountIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC0DF202AD605B30094BD72 /* IncreaseCountIntent.swift */; };
-		CCC0DF222AD605BF0094BD72 /* IncreaseCountIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC0DF202AD605B30094BD72 /* IncreaseCountIntent.swift */; };
+		CCC0DF212AD605B30094BD72 /* IncreasePushUpsCountIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC0DF202AD605B30094BD72 /* IncreasePushUpsCountIntent.swift */; };
+		CCC0DF222AD605BF0094BD72 /* IncreasePushUpsCountIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC0DF202AD605B30094BD72 /* IncreasePushUpsCountIntent.swift */; };
 		CCD08D422AB8D3C500D3C940 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC590EE62AB116D300B237DB /* WidgetKit.framework */; };
 		CCD08D432AB8D3C500D3C940 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC590EE82AB116D300B237DB /* SwiftUI.framework */; };
 		CCD08D462AB8D3C500D3C940 /* PushUpsWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD08D452AB8D3C500D3C940 /* PushUpsWidgetBundle.swift */; };
@@ -34,6 +44,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		CC3D1F0A2ADF126800DF73AD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CC3299102AB0C66800B13A6C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CC3D1EFA2ADF126800DF73AD;
+			remoteInfo = SitupsWidgetExtension;
+		};
 		CCD08D502AB8D3C700D3C940 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = CC3299102AB0C66800B13A6C /* Project object */;
@@ -46,10 +63,11 @@
 /* Begin PBXCopyFilesBuildPhase section */
 		CC590EFD2AB116D500B237DB /* Embed Foundation Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 12;
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
+				CC3D1F112ADF153000DF73AD /* SitupsWidgetExtension.appex in Embed Foundation Extensions */,
 				CCD08D522AB8D3C700D3C940 /* PushUpsWidgetExtension.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
@@ -69,13 +87,21 @@
 		CC32991D2AB0C66800B13A6C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		CC32991F2AB0C66A00B13A6C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CC3299222AB0C66A00B13A6C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		CC3D1EFB2ADF126800DF73AD /* SitupsWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = SitupsWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC3D1EFF2ADF126800DF73AD /* SitupsWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SitupsWidgetBundle.swift; sourceTree = "<group>"; };
+		CC3D1F012ADF126800DF73AD /* SitupsWidgetLiveActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SitupsWidgetLiveActivity.swift; sourceTree = "<group>"; };
+		CC3D1F032ADF126800DF73AD /* SitupsWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SitupsWidget.swift; sourceTree = "<group>"; };
+		CC3D1F052ADF126800DF73AD /* AppIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIntent.swift; sourceTree = "<group>"; };
+		CC3D1F072ADF126800DF73AD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CC3D1F092ADF126800DF73AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CC3D1F0F2ADF138B00DF73AD /* SitupsWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SitupsWidgetExtension.entitlements; sourceTree = "<group>"; };
 		CC4529CD2AC0E9A600DA588F /* WidgetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetViewModel.swift; sourceTree = "<group>"; };
 		CC590EDC2AB10B1500B237DB /* ProgressTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressTabView.swift; sourceTree = "<group>"; };
 		CC590EDE2AB114AA00B237DB /* TodayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayView.swift; sourceTree = "<group>"; };
 		CC590EE62AB116D300B237DB /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		CC590EE82AB116D300B237DB /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		CCACB3372AB88F9D00B6C00A /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
-		CCC0DF202AD605B30094BD72 /* IncreaseCountIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncreaseCountIntent.swift; sourceTree = "<group>"; };
+		CCC0DF202AD605B30094BD72 /* IncreasePushUpsCountIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncreasePushUpsCountIntent.swift; sourceTree = "<group>"; };
 		CCD08D412AB8D3C500D3C940 /* PushUpsWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = PushUpsWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCD08D452AB8D3C500D3C940 /* PushUpsWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushUpsWidgetBundle.swift; sourceTree = "<group>"; };
 		CCD08D472AB8D3C500D3C940 /* PushUpsWidgetLiveActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushUpsWidgetLiveActivity.swift; sourceTree = "<group>"; };
@@ -90,6 +116,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC3D1EF82ADF126800DF73AD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC3D1EFD2ADF126800DF73AD /* SwiftUI.framework in Frameworks */,
+				CC3D1EFC2ADF126800DF73AD /* WidgetKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,10 +143,12 @@
 		CC32990F2AB0C66800B13A6C = {
 			isa = PBXGroup;
 			children = (
+				CC3D1F0F2ADF138B00DF73AD /* SitupsWidgetExtension.entitlements */,
 				CC143A742AD5CE4B0002BD3B /* PushUpsWidgetExtension.entitlements */,
 				CC0622F32AC308040032A254 /* DataModels.swift */,
 				CC32991A2AB0C66800B13A6C /* Motivator */,
 				CCD08D442AB8D3C500D3C940 /* PushUpsWidget */,
+				CC3D1EFE2ADF126800DF73AD /* SitupsWidget */,
 				CC590EE52AB116D300B237DB /* Frameworks */,
 				CC3299192AB0C66800B13A6C /* Products */,
 			);
@@ -122,6 +159,7 @@
 			children = (
 				CC3299182AB0C66800B13A6C /* Motivator.app */,
 				CCD08D412AB8D3C500D3C940 /* PushUpsWidgetExtension.appex */,
+				CC3D1EFB2ADF126800DF73AD /* SitupsWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -153,6 +191,19 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		CC3D1EFE2ADF126800DF73AD /* SitupsWidget */ = {
+			isa = PBXGroup;
+			children = (
+				CC3D1EFF2ADF126800DF73AD /* SitupsWidgetBundle.swift */,
+				CC3D1F012ADF126800DF73AD /* SitupsWidgetLiveActivity.swift */,
+				CC3D1F032ADF126800DF73AD /* SitupsWidget.swift */,
+				CC3D1F052ADF126800DF73AD /* AppIntent.swift */,
+				CC3D1F072ADF126800DF73AD /* Assets.xcassets */,
+				CC3D1F092ADF126800DF73AD /* Info.plist */,
+			);
+			path = SitupsWidget;
+			sourceTree = "<group>";
+		};
 		CC590EE52AB116D300B237DB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -171,7 +222,7 @@
 				CCD08D4B2AB8D3C500D3C940 /* AppIntent.swift */,
 				CCD08D4D2AB8D3C700D3C940 /* Assets.xcassets */,
 				CCD08D4F2AB8D3C700D3C940 /* Info.plist */,
-				CCC0DF202AD605B30094BD72 /* IncreaseCountIntent.swift */,
+				CCC0DF202AD605B30094BD72 /* IncreasePushUpsCountIntent.swift */,
 			);
 			path = PushUpsWidget;
 			sourceTree = "<group>";
@@ -192,11 +243,29 @@
 			);
 			dependencies = (
 				CCD08D512AB8D3C700D3C940 /* PBXTargetDependency */,
+				CC3D1F0B2ADF126800DF73AD /* PBXTargetDependency */,
 			);
 			name = Motivator;
 			productName = Motivator;
 			productReference = CC3299182AB0C66800B13A6C /* Motivator.app */;
 			productType = "com.apple.product-type.application";
+		};
+		CC3D1EFA2ADF126800DF73AD /* SitupsWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CC3D1F0C2ADF126800DF73AD /* Build configuration list for PBXNativeTarget "SitupsWidgetExtension" */;
+			buildPhases = (
+				CC3D1EF72ADF126800DF73AD /* Sources */,
+				CC3D1EF82ADF126800DF73AD /* Frameworks */,
+				CC3D1EF92ADF126800DF73AD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SitupsWidgetExtension;
+			productName = SitupsWidgetExtension;
+			productReference = CC3D1EFB2ADF126800DF73AD /* SitupsWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 		CCD08D402AB8D3C500D3C940 /* PushUpsWidgetExtension */ = {
 			isa = PBXNativeTarget;
@@ -228,6 +297,9 @@
 					CC3299172AB0C66800B13A6C = {
 						CreatedOnToolsVersion = 14.3;
 					};
+					CC3D1EFA2ADF126800DF73AD = {
+						CreatedOnToolsVersion = 15.0;
+					};
 					CCD08D402AB8D3C500D3C940 = {
 						CreatedOnToolsVersion = 15.0;
 					};
@@ -248,6 +320,7 @@
 			targets = (
 				CC3299172AB0C66800B13A6C /* Motivator */,
 				CCD08D402AB8D3C500D3C940 /* PushUpsWidgetExtension */,
+				CC3D1EFA2ADF126800DF73AD /* SitupsWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -259,6 +332,15 @@
 			files = (
 				CC3299232AB0C66A00B13A6C /* Preview Assets.xcassets in Resources */,
 				CC3299202AB0C66A00B13A6C /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC3D1EF92ADF126800DF73AD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC3D1F132ADF157B00DF73AD /* Assets.xcassets in Resources */,
+				CC3D1F082ADF126800DF73AD /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,13 +364,25 @@
 				CC0622F42AC308040032A254 /* DataModels.swift in Sources */,
 				CC2991B02ABDE63200283DCE /* WidgetView.swift in Sources */,
 				CC4529CE2AC0E9A600DA588F /* WidgetViewModel.swift in Sources */,
-				CCC0DF212AD605B30094BD72 /* IncreaseCountIntent.swift in Sources */,
+				CCC0DF212AD605B30094BD72 /* IncreasePushUpsCountIntent.swift in Sources */,
 				CC0067462ABB4CE600AAA1B2 /* DetailsView.swift in Sources */,
 				CC590EDD2AB10B1500B237DB /* ProgressTabView.swift in Sources */,
 				CC2991AE2ABDC79E00283DCE /* EditView.swift in Sources */,
 				CC0622F12AC305EC0032A254 /* (null) in Sources */,
 				CC590EDF2AB114AB00B237DB /* TodayView.swift in Sources */,
 				CC32991C2AB0C66800B13A6C /* MotivatorApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC3D1EF72ADF126800DF73AD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC3D1F022ADF126800DF73AD /* SitupsWidgetLiveActivity.swift in Sources */,
+				CC3D1F102ADF13C200DF73AD /* IncreasePushUpsCountIntent.swift in Sources */,
+				CC3D1F062ADF126800DF73AD /* AppIntent.swift in Sources */,
+				CC3D1F002ADF126800DF73AD /* SitupsWidgetBundle.swift in Sources */,
+				CC3D1F042ADF126800DF73AD /* SitupsWidget.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,13 +395,18 @@
 				CCD08D4C2AB8D3C500D3C940 /* AppIntent.swift in Sources */,
 				CCD08D482AB8D3C500D3C940 /* PushUpsWidgetLiveActivity.swift in Sources */,
 				CCD08D4A2AB8D3C500D3C940 /* PushUpsWidget.swift in Sources */,
-				CCC0DF222AD605BF0094BD72 /* IncreaseCountIntent.swift in Sources */,
+				CCC0DF222AD605BF0094BD72 /* IncreasePushUpsCountIntent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		CC3D1F0B2ADF126800DF73AD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CC3D1EFA2ADF126800DF73AD /* SitupsWidgetExtension */;
+			targetProxy = CC3D1F0A2ADF126800DF73AD /* PBXContainerItemProxy */;
+		};
 		CCD08D512AB8D3C700D3C940 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = CCD08D402AB8D3C500D3C940 /* PushUpsWidgetExtension */;
@@ -498,6 +597,75 @@
 			};
 			name = Release;
 		};
+		CC3D1F0D2ADF126800DF73AD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = SitupsWidgetExtension.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = J2ZYT8H56Z;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SitupsWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = SitupsWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Nada.Ashraf.Motivator.SitupsWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CC3D1F0E2ADF126800DF73AD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = SitupsWidgetExtension.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = J2ZYT8H56Z;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SitupsWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = SitupsWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Nada.Ashraf.Motivator.SitupsWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		CCD08D532AB8D3C700D3C940 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -586,6 +754,15 @@
 			buildConfigurations = (
 				CC3299272AB0C66A00B13A6C /* Debug */,
 				CC3299282AB0C66A00B13A6C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CC3D1F0C2ADF126800DF73AD /* Build configuration list for PBXNativeTarget "SitupsWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC3D1F0D2ADF126800DF73AD /* Debug */,
+				CC3D1F0E2ADF126800DF73AD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

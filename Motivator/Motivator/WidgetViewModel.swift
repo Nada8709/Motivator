@@ -78,6 +78,40 @@ final class WidgetViewModel: ObservableObject{
             return savedTeethBrushing.map{$0.counter}.max() ?? 0
         }
     }
+    func checkTime(){
+        if UserDefaults.standard.bool(forKey: "didLaunchBefore") == false{
+         //only runs the first time your app is launched
+                   UserDefaults.standard.set(true, forKey: "didLaunchBefore")
+         //sets the initial value for tomorrow
+                   let now = Calendar.current.dateComponents(in: .current, from: Date())
+                   let tomorrow = DateComponents(year: now.year, month: now.month, day: now.day, hour: now.hour, minute: now.minute! + 1, second: now.second)
+                   let date = Calendar.current.date(from: tomorrow)
+                   UserDefaults.standard.set(date, forKey: "tomorrow")
+               }
+               if UserDefaults.standard.object(forKey: "tomorrow") != nil{//makes sure tomorrow is not nil
+                   if Date() > UserDefaults.standard.object(forKey: "tomorrow") as! Date {// if todays date is after(greater than) the 24 hour period you set last time you reset your values this will run
+         // reseting "tomorrow" to the actual tomorrow
+                       let now = Calendar.current.dateComponents(in: .current, from: Date())
+                       let tomorrow = DateComponents(year: now.year, month: now.month, day: now.day, hour: now.hour, minute: now.minute! + 1, second: now.second)
+                       let date = Calendar.current.date(from: tomorrow)
+                       UserDefaults.standard.set(date, forKey: "tomorrow")
+                       //reset your values here
+                       if let store = UserDefaults(suiteName: "group.Nada.Ashraf.Motivator"){
+                           var count = store.integer(forKey: "PushUpsCounter")
+                           savedPushUps.append(CounterModels(counter: count, date: Date()))
+                           store.setValue(0, forKey: "PushUpsCounter")
+                         
+                           count = store.integer(forKey: "SitUpsCounter")
+                           savedSitUps.append(CounterModels(counter: count, date: Date()))
+                           store.setValue(0, forKey: "SitUpsCounter")
+                         
+                           count = store.integer(forKey: "BrushTeethCounter")
+                           savedTeethBrushing.append(CounterModels(counter: count, date: Date()))
+                           store.setValue(0, forKey: "BrushTeethCounter")
+                       }
+                   }
+               }
+    }
     
 }
 
